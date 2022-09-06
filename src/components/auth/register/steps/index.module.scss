@@ -1,0 +1,90 @@
+.container {
+  height: 100vh;
+}
+.stepContainer{
+  height: 100%;
+  background-color: #232323;
+  border-radius: 0 50px 50px 0;
+}
+.contentContainer{
+  height: 100%;
+}
+.steps {
+  :global {
+    .ant-steps-item {
+      height: 120px;
+    }
+    .ant-steps-item-icon {
+      width: 60px;
+      height: 60px !important;
+      background-color: white !important;
+      border: unset !important;
+      border-radius: 10px !important;
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ant-steps-item-tail {
+      top: 30% !important;
+      left: 30px !important;
+      height: 65% !important;
+    }
+
+    .ant-steps-icon {
+      top: 30% !important;
+      color: black !important;
+      font-size: 30px !important;
+    }
+
+    .ant-steps-item-title {
+      color: white !important;
+      text-transform: uppercase;
+    }
+    .ant-steps-item-description {
+      color: white !important;
+      text-transform: capitalize;
+    }
+  }
+
+  .active {
+    :global {
+      .ant-steps-item-icon {
+        background-color: #f42c97 !important;
+      }
+      .ant-steps-icon {
+        color: white !important;
+      }
+    }
+  }
+
+  .disable {
+    :global {
+      .ant-steps-item-icon {
+        background-color: #282828 !important;
+      }
+      .ant-steps-icon {
+        color: #f0f0f0 !important;
+      }
+      .ant-steps-item-title {
+        color: #fafafa !important;
+      }
+      .ant-steps-item-description {
+        color: #fafafa !important;
+      }
+    }
+  }
+
+}
+.btn_next {
+  width: 12rem;
+  height: 3rem;
+  color: #ffffff;
+  background-color: #f42c97;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn_pre {
+  cursor: pointer;
+}

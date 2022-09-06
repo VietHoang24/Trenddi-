@@ -1,0 +1,10 @@
+.form {
+  :global {
+    .ant-form-item-control-input-content > .ant-input,
+    .ant-form-item-control-input-content > .ant-input-password,
+    .ant-form-item-control-input-content > .ant-select > .ant-select-selector {
+      height: 3rem !important;
+      border-radius: 10px !important;
+    }
+  }
+}
