@@ -1,13 +1,18 @@
-import { Breadcrumb, Button, Col, Layout, Menu, Row, Space, Image, Typography, Form, Input } from 'antd';
+import { Breadcrumb, Button, Col, Layout, Menu, Row, Space, Image, Typography, Form, Input, Modal } from 'antd';
 import { Content, Footer, Header } from 'antd/lib/layout/layout';
 import React, { useState } from 'react';
 import CustomButton from 'src/commonComponents/button';
 import SelectCard from 'src/commonComponents/selectCard';
+import AddProductModal from './addProductModal';
 import styles from './index.module.scss';
+import router from "next/router";
 
 const AddProduct = () => {
     const [isSelectedShopify,setIsSelectedShopify] =useState(true);
     const [isSelectedCsv,setIsSelectedCsv] =useState(false);
+    const [openModal, setOpenModal] = useState(false);
+    const [confirmLoading, setConfirmLoading] = useState(false);
+    const [modalText, setModalText] = useState('Content of the modal');
     const handleClickShopify=()=>{
       setIsSelectedShopify(true);
       setIsSelectedCsv(false);
@@ -16,8 +21,26 @@ const AddProduct = () => {
       setIsSelectedShopify(false);
       setIsSelectedCsv(true);
     }
+  const showModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleOk = () => {
+    setModalText('The modal will be closed after two seconds');
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setOpenModal(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log('Clicked cancel button');
+    setOpenModal(false);
+  };
+
   const onFinish=()=>{
-    alert("Finish")
+    router.push(`/products/step3`);
   }
   return (
     <>
@@ -65,7 +88,7 @@ const AddProduct = () => {
                 <Col  xl={12} className={styles.bodyRight}>
                   <Row justify="center" gutter={[0, 8]}>
                     <Col span={24}>
-                      <Typography.Title level={3}>Add your product data feed</Typography.Title>
+                      <Typography.Title level={2}>Add your product data feed</Typography.Title>
                     </Col>
                     <Col span={24}>
                       <Row justify="space-between" gutter={[24, 0]}>
@@ -97,7 +120,7 @@ const AddProduct = () => {
                                     message: 'Please upload product CSV file'
                                 }]
                             }>
-                          <div className={styles.uploadFile}>
+                          <div className={styles.uploadFile} onClick={showModal}>
                             <Image src="/images/uploadIcon.svg" preview={false} />
                             <Typography.Title level={5}>Upload File</Typography.Title>
                         </div>
@@ -115,11 +138,16 @@ const AddProduct = () => {
                                     message: 'Please enter Shopify link'
                                 }]
                             }>
-                                <Input style={{borderRadius: '10px', height: '3rem'}} type="email"/>
+                                <Input style={{borderRadius: '10px', height: '3rem'}} type="text"/>
                             </Form.Item>
                       </div>
                     </Col>}
                      
+                  </Row>
+                </Col>
+                <Col span={24}>
+                  <Row justify="end" className={styles.bodyBottom}>
+                    <Typography.Text >Not have mentioned format?</Typography.Text>
                   </Row>
                 </Col>
               </Row>
@@ -130,6 +158,15 @@ const AddProduct = () => {
           <CustomButton background='black' title={"Next"} htmlType="submit"/>
           </Row>
           </Form>
+         <AddProductModal 
+         openModal={openModal} 
+         setOpenModal={setOpenModal}
+         handleOk={handleOk}   
+         confirmLoading={confirmLoading}
+          onCancel={handleCancel}
+          handleCancel={handleCancel}
+          showModal={showModal}
+        />   
 
         </Content>
        

@@ -5,6 +5,7 @@ export interface CustomButtonProps{
 	background: "white"|"black";
 	title:string;
 	htmlType?:"button" | "submit" | "reset" | undefined
+	onClick?:()=>void;
 }
 export interface btnStyle {
 	backgroundColor?:string;
@@ -12,7 +13,7 @@ export interface btnStyle {
 	border?:string;
 }
 const CustomButton = (props: CustomButtonProps) =>{
-const {background,title,htmlType} =props
+const {background,title,htmlType,onClick} =props
 let btnStyle:btnStyle;
 switch (background) {
   case "black":
@@ -33,6 +34,7 @@ switch (background) {
 	<Button className={styles.button}
 		style={btnStyle}
 		htmlType={htmlType}
+		onClick={onClick}
 	>
     	{title}
     </Button>
