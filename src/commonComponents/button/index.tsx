@@ -4,6 +4,7 @@ import styles from './index.module.scss'
 export interface CustomButtonProps{
 	background: "white"|"black";
 	title:string;
+	htmlType?:"button" | "submit" | "reset" | undefined
 }
 export interface btnStyle {
 	backgroundColor?:string;
@@ -11,7 +12,7 @@ export interface btnStyle {
 	border?:string;
 }
 const CustomButton = (props: CustomButtonProps) =>{
-const {background,title} =props
+const {background,title,htmlType} =props
 let btnStyle:btnStyle;
 switch (background) {
   case "black":
@@ -31,6 +32,7 @@ switch (background) {
   return (
 	<Button className={styles.button}
 		style={btnStyle}
+		htmlType={htmlType}
 	>
     	{title}
     </Button>
