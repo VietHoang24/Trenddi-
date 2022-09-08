@@ -1,9 +1,9 @@
-import AddProduct from '@components/products/step2'
+import ProductsPage from '@components/products'
 import React from 'react'
 
 const Products = () => {
   return (
-	<AddProduct/>
+	<ProductsPage/>
   )
 }
 

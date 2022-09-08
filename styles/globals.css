@@ -14,9 +14,31 @@ body {
   top: 200px !important;
 }
 
+.ant-modal-content {
+  border-radius: 20px !important;
+}
+
+.ant-select-selector {
+  border-radius: 10px !important;
+  height: 3rem !important;
+}
+
+.ant-select-selection-item {
+  line-height: 2.8rem !important;
+}
+
+.ant-picker {
+  border-radius: 10px !important;
+  height: 3rem !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.secondary-color {
+  color: grey !important;
 }
 
 * {
