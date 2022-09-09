@@ -1,27 +1,22 @@
-import { Layout, Image, Form, Row, Col, Typography, Input, Select, DatePicker } from 'antd';
-import { Content, Header } from 'antd/lib/layout/layout';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import BasicDatePicker from 'src/commonComponents/basicDatePicker';
-import BasicInput from 'src/commonComponents/basicInput';
-import BasicSelect from 'src/commonComponents/basicSelect';
+import { Col, Form, Row } from 'antd';
+import { useState } from 'react';
+import { useDispatch } from "react-redux";
 import CustomButton from 'src/commonComponents/button';
-import InputFrame from 'src/commonComponents/inputFrame/inputFrame';
 import NotifyPopup from 'src/commonComponents/NotifyPopup';
-import SelectCard from 'src/commonComponents/selectCard';
+import { setProductCurrentPageState } from 'store/productsSlice';
 import CampaignBrand from './campaignBrand';
 import CampaignBuget from './campaignBuget';
 import CampaignGoal from './campaignGoal';
 import FeeAndPayment from './feeAndPayment';
+import router from "next/router";
+
 import styles from './index.module.scss';
-import { setProductCurrentPageState } from 'store/productsSlice';
-import { useDispatch } from "react-redux";
 const CampaignFrame = () => {
   const [isOpen,setIsOpen] =useState(false)
   const dispatch=useDispatch();
   const onFinish = () => {
-    console.log("huhu")
-   dispatch(setProductCurrentPageState('success'))
+    
+    router.push('/products/success')
   };
   const handlePreviousClick = () => {
     dispatch(setProductCurrentPageState('3'))

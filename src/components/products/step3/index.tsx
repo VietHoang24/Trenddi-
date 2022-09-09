@@ -1,13 +1,11 @@
-import { Breadcrumb, Button, Col, Layout, Menu, Row, Space, Image, Typography, Form, Input, Modal } from 'antd';
-import { Content, Footer, Header } from 'antd/lib/layout/layout';
-import React, { useState } from 'react';
+import { Col, Form, Image, Row, Typography } from 'antd';
+import { useState } from 'react';
+import { useDispatch } from "react-redux";
 import CustomButton from 'src/commonComponents/button';
 import SelectCard from 'src/commonComponents/selectCard';
+import { setProductCurrentPageState } from 'store/productsSlice';
 import AddProductModal from './createCampaign';
 import styles from './index.module.scss';
-import router from "next/router";
-import { setProductCurrentPageState } from 'store/productsSlice';
-import { useDispatch } from "react-redux";
 
 interface CreateCampaignProps{
  

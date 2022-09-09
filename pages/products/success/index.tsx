@@ -1,9 +1,10 @@
+import CreateCampaignSuccess from '@components/products/success'
 import React from 'react'
 
-const index = () => {
+const Success = () => {
   return (
-	<div>index</div>
+    <CreateCampaignSuccess/>
   )
 }
 
-export default index
+export default Success
