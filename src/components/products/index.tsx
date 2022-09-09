@@ -8,7 +8,8 @@ import styles from './index.module.scss'
 import CampaignGoal from './step3/campaignGoal'
 import { useSelector } from "react-redux";
 import { selectProductCurrentPageState } from 'store/productsSlice'
-import CampaignFrame from './step3/campaignFrame'
+import CampaignFrame from './step3/createCampaignForm'
+import CreateCampaignSuccess from './success'
 const ProductsPage = () => {
   const  currentTab = useSelector(selectProductCurrentPageState);
 	function generateTabs() {
@@ -16,7 +17,7 @@ const ProductsPage = () => {
 			case "2": return <AddProduct />
 			case "3": return<CreateCampaign />
 			case "3.1": return<CampaignFrame/>
-
+			case "success": return <CreateCampaignSuccess/>
 		}
 	}
   return (

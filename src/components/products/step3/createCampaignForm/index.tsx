@@ -14,19 +14,24 @@ import CampaignBuget from './campaignBuget';
 import CampaignGoal from './campaignGoal';
 import FeeAndPayment from './feeAndPayment';
 import styles from './index.module.scss';
-
+import { setProductCurrentPageState } from 'store/productsSlice';
+import { useDispatch } from "react-redux";
 const CampaignFrame = () => {
   const [isOpen,setIsOpen] =useState(false)
+  const dispatch=useDispatch();
   const onFinish = () => {
-    console.log("à thế à: ")
-    setIsOpen(true)
+    console.log("huhu")
+   dispatch(setProductCurrentPageState('success'))
   };
   const handlePreviousClick = () => {
-    
+    dispatch(setProductCurrentPageState('3'))
+  }
+  const handleNextClick=()=>{
+     setIsOpen(true)
   }
   return (
     <>
-      <Form layout="vertical" onFinish={onFinish}>
+      <Form layout="vertical" onFinish={onFinish} id='createCampaignForm'>
         <Row className={styles.container}>
           <Col span={24} className={styles.campaignFrame}>
             <Row gutter={[48, 0]}>
@@ -43,17 +48,19 @@ const CampaignFrame = () => {
         </Row>
         <Row justify="end" className={styles.buttonBox}>
           <CustomButton background="white" title="Previous" onClick={handlePreviousClick} />
-          <CustomButton background="black" title={'Next'} htmlType="submit" />
-
+          <CustomButton background="black" title={'Next'} onClick={handleNextClick} />
         </Row>
+        <NotifyPopup 
+          status="warning" 
+          title="Campaign Confirmation"
+          message="Ads will be crated for this campaign once it has been approved"
+          visible={isOpen}
+          onCancel={()=>  setIsOpen(false)}
+          htmlType="submit"
+          form= "createCampaignForm"
+        />
       </Form>
-      <NotifyPopup 
-        status="warning" 
-        title="Campaign Confirmation"
-        message="Ads will be crated for this campaign once it has been approved"
-        visible={isOpen}
-        onCancel={()=>  setIsOpen(false)}
-      />
+      
     </>
    
   );

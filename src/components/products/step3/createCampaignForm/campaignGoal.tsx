@@ -45,7 +45,7 @@ const CampaignGoal = () => {
                     />
                   </Col>
                 </Row>
-              </InputFrame>
+    </InputFrame>
   )
 }
 

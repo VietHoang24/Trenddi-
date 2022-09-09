@@ -42,7 +42,6 @@ const CreateCampaign = (props: CreateCampaignProps) => {
   };
 
   const handleCancel = () => {
-    console.log('Clicked cancel button');
     setOpenModal(false);
   };
 

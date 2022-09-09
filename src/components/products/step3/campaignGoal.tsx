@@ -1,7 +1,7 @@
 import { Layout,Image, Col, Row, Typography } from 'antd'
 import { Content, Header } from 'antd/lib/layout/layout'
 import React from 'react'
-import CampaignFrame from './campaignFrame';
+import CampaignFrame from './createCampaignForm';
 import styles from './index.module.scss';
 interface CampaignGoalProps{
   setCurrentTab?:React.Dispatch<React.SetStateAction<string>>;

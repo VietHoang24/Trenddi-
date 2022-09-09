@@ -1,0 +1,40 @@
+.container {
+  //max-width: 1400px;
+  display: flex;
+  margin: auto;
+  h2 {
+    margin-top: 0 !important;
+  }
+  h3 {
+    margin-top: 0 !important;
+  }
+  h1 {
+    margin-top: 0 !important;
+  }
+  h4 {
+    margin-top: 0 !important;
+  }
+  h5 {
+    margin-top: 0 !important;
+  }
+}
+.campaignFrame {
+  .bodyLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.inputFrame {
+  width: 100%;
+  background-color: #ffff;
+  height: max-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+.createFormInfor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

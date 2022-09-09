@@ -6,14 +6,19 @@ export interface CustomButtonProps{
 	title:string;
 	htmlType?:"button" | "submit" | "reset" | undefined
 	onClick?:()=>void;
+	form?:string;
+	width?:string;
+	height?:string;
 }
 export interface btnStyle {
 	backgroundColor?:string;
 	color?:string;
 	border?:string;
+	width?:string;
+	height?:string;
 }
 const CustomButton = (props: CustomButtonProps) =>{
-const {background,title,htmlType,onClick} =props
+const {background,title,htmlType,onClick,form,width,height} = props
 let btnStyle:btnStyle;
 switch (background) {
   case "black":
@@ -30,11 +35,14 @@ switch (background) {
     break;
  
 }
+	width&&(btnStyle['width']=width)
+	height&&(btnStyle['height']=height)
   return (
 	<Button className={styles.button}
 		style={btnStyle}
 		htmlType={htmlType}
 		onClick={onClick}
+		form={form}
 	>
     	{title}
     </Button>

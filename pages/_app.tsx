@@ -36,7 +36,6 @@ const handleResize = () => {
 useEffect(() => {
   window.addEventListener("resize", handleResize)
 })
-console.log("screenSize la: ",screenSize)
     return <>
     <Layout  >
         <HeaderPage padding={padding} />   

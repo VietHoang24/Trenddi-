@@ -41,7 +41,6 @@ const AddProduct = (props:AddProductProps) => {
   };
 
   const handleCancel = () => {
-    console.log('Clicked cancel button');
     setOpenModal(false);
   };
 

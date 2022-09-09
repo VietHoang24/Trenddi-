@@ -22,6 +22,8 @@ interface IProps {
   labelBtnDelete?: string;
   loading?: boolean;
   onConfirm?: () => void;
+  htmlType?: "button" | "submit" | "reset";
+  form?:string;
 }
 const NotifyPopup = ({
   status,
@@ -37,7 +39,9 @@ const NotifyPopup = ({
   onDelete,
   labelBtnDelete,
   loading,
-  onConfirm
+  onConfirm,
+  htmlType,
+  form
 }: IProps) => {
   return (
     <Modal
@@ -61,7 +65,7 @@ const NotifyPopup = ({
           <CustomButton background="white" title="Previous" />
         </Col>
         <Col>
-          <CustomButton background="black" title={'Next'} htmlType="submit" />
+          <CustomButton background="black" title={'Next'} htmlType={htmlType} form={form} />
         </Col>
         </Row>
           </div>
@@ -80,7 +84,7 @@ const NotifyPopup = ({
           <CustomButton background="white" title="Previous" />
         </Col>
         <Col>
-          <CustomButton background="black" title={'Next'} htmlType="submit" />
+          <CustomButton background="black" title={'Next'} htmlType={htmlType} form={form}/>
         </Col>
         </Row>
           </div>
@@ -99,7 +103,7 @@ const NotifyPopup = ({
           <CustomButton background="white" title="Cancel" onClick={onCancel} />
         </Col>
         <Col>
-          <CustomButton background="black" title={'Confirm'} htmlType="submit" onClick={onConfirm} />
+          <CustomButton background="black" title={'Confirm'} htmlType={htmlType} onClick={onConfirm} form={form} />
         </Col>
         </Row>
           </div>
