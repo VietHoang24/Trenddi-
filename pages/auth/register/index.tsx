@@ -4,9 +4,9 @@ import RegistrationFormComponent from "@components/auth/register";
 
 const Register: React.FC = () => {
     return (
-        <Main>
+      
             <RegistrationFormComponent/>
-        </Main>
+       
     )
 }
 

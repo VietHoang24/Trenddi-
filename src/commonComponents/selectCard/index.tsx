@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './index.module.scss'
 import { Image, Typography } from 'antd'
 export interface SelectCardProps{
-	isSelected: boolean;
+	isSelected?: boolean;
 	title: string;
 	cardIcon:string;
 	cardIconBg: string;

@@ -9,7 +9,7 @@ const CreateCampaignSuccess = () => {
       <Form layout="vertical">
         <Row className={styles.container}>
           <Col span={24} className={styles.campaignFrame}>
-            <Row gutter={[48, 0]} justify="space-between">
+            <Row gutter={[48, 0]} justify="space-between" align='middle'>
               <Col xl={10} xs={24} className={styles.bodyLeft}>
                 <InputFrame style={{height: "200px"}}><></></InputFrame>
                 <Typography.Title level={1}>
@@ -18,7 +18,8 @@ const CreateCampaignSuccess = () => {
                     Your campaign is now <br />
                     be ing approved
                   </p>
-				<CustomButton background="black" title={'View Campaign'} htmlType="submit" width={"150px"} height="50px"/>
+				        <CustomButton background="black" title={'View Campaign'}
+                 htmlType="submit" width={"150px"} height="50px"/>
                 </Typography.Title>
 			
           		

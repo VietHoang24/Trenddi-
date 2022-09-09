@@ -19,9 +19,7 @@ export const getServerSideProps = async ({query}) => {
 }
 const ResetPassword: NextPage<{token: string}> = ({token}) => {
     return (
-        <Main>
             <ResetPasswordComponent token={token}/>
-        </Main>
     )
 }
 

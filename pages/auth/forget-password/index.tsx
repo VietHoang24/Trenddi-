@@ -4,9 +4,7 @@ import ForgetPasswordComponent from "@components/auth/forget-password";
 
 const Login: React.FC = () => {
     return (
-        <Main>
             <ForgetPasswordComponent/>
-        </Main>
     )
 }
 

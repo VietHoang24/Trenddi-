@@ -1,15 +1,22 @@
 import { Col, Row, Typography } from 'antd'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import BasicInput from 'src/commonComponents/basicInput'
 import BasicSelect from 'src/commonComponents/basicSelect'
 import InputFrame from 'src/commonComponents/inputFrame/inputFrame'
+import { selectIsCPClickState, selectIsCPImpressionState } from 'store/productsSlice'
 
 const CampaignGoal = () => {
+  const  isCPImpresion = useSelector(selectIsCPImpressionState);
+  const  isCPClick = useSelector(selectIsCPClickState);
   return (
 	 <InputFrame>
-                <Typography.Title level={3}>
+                {isCPImpresion&&<Typography.Title level={3}>
                   Campaign goal: CMP - Cost per impression
-                </Typography.Title>
+                </Typography.Title>}
+                {isCPClick&&<Typography.Title level={3}>
+                  Campaign goal: CMP - Cost per click
+                </Typography.Title>}
                 <Row gutter={[24, 0]}>
                   <Col md={12} xs={24}>
                     <BasicInput

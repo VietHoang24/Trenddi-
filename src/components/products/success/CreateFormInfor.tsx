@@ -41,9 +41,12 @@ const CreateFormInfor = () => {
               <Typography.Title level={4}>CTM - Cost per impression</Typography.Title>
             </Col>
           </Row>
-          <Typography.Text>
+          <Col span={24}>
+             <Typography.Text>
             <span className="secondary-color">The country the product are sold: Australia</span>
           </Typography.Text>
+          </Col>
+         
         </Row>
         
         <Line/>

@@ -1,48 +1,32 @@
 import { Col, Form, Image, Row, Typography } from 'antd';
 import { useState } from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CustomButton from 'src/commonComponents/button';
 import SelectCard from 'src/commonComponents/selectCard';
-import { setProductCurrentPageState } from 'store/productsSlice';
-import AddProductModal from './createCampaign';
+import { setProductCurrentPageState,setIsCPImpressionState
+  ,setIsCPClickState,selectProductCurrentPageState,
+   selectIsCPImpressionState,selectIsCPClickState } from 'store/productsSlice';
 import styles from './index.module.scss';
 
+import { } from 'store/productsSlice';
 interface CreateCampaignProps{
- 
+  
 }
 const CreateCampaign = (props: CreateCampaignProps) => {
     const dispatch = useDispatch()
-    const [isSelectedShopify,setIsSelectedShopify] =useState(true);
-    const [isSelectedCsv,setIsSelectedCsv] =useState(false);
-    const [openModal, setOpenModal] = useState(false);
-    const [confirmLoading, setConfirmLoading] = useState(false);
-    const [modalText, setModalText] = useState('Content of the modal');
-
-    const handleClickShopify=()=>{
-      setIsSelectedShopify(true);
-      setIsSelectedCsv(false);
+  
+    const  isCPImpresion = useSelector(selectIsCPImpressionState);
+    const  isCPClick = useSelector(selectIsCPClickState);
+    console.log("iscpi: ",isCPImpresion)
+    const handleClickCPM=()=>{
+      console.log("cpm")
+      dispatch(setIsCPImpressionState(true))
+      dispatch(setIsCPClickState(false))
     }
-     const handleClickCsv=()=>{
-      setIsSelectedShopify(false);
-      setIsSelectedCsv(true);
+     const handleClickCPC=()=>{
+       dispatch(setIsCPClickState(true))
+       dispatch(setIsCPImpressionState(false))
     }
-  const showModal = () => {
-    setOpenModal(true);
-  };
-
-  const handleOk = () => {
-    setModalText('The modal will be closed after two seconds');
-    setConfirmLoading(true);
-    setTimeout(() => {
-      setOpenModal(false);
-      setConfirmLoading(false);
-    }, 2000);
-  };
-
-  const handleCancel = () => {
-    setOpenModal(false);
-  };
-
   const onFinish=()=>{
     dispatch(setProductCurrentPageState('3.1'))
   }
@@ -69,20 +53,20 @@ const CreateCampaign = (props: CreateCampaignProps) => {
                       <Row justify="space-between" gutter={[24, 24]}>
                         <Col span={16}>
                           <SelectCard
-                            isSelected={isSelectedShopify}
+                            isSelected={isCPImpresion}
                             title="CPM - Cost per impression"
                             cardIcon="/images/shopify.svg"
                             cardIconBg="rgba(243, 44, 151, 0.08)"
-                            onClick={handleClickShopify}
+                            onClick={handleClickCPM}
                           />
                         </Col>
                         <Col span={16}>
                           <SelectCard
-                            isSelected={isSelectedCsv}
+                            isSelected={isCPClick}
                             title="CPM - Cost per click"
                             cardIcon="/images/csv.svg"
                             cardIconBg="rgba(255, 166, 33, 0.08)"
-                            onClick={handleClickCsv}
+                            onClick={handleClickCPC}
                           />
                         </Col>
                       </Row>
@@ -103,15 +87,7 @@ const CreateCampaign = (props: CreateCampaignProps) => {
           <CustomButton background='black' title={"Next"} htmlType="submit"/>
           </Row>
           </Form>
-         <AddProductModal 
-            openModal={openModal} 
-            setOpenModal={setOpenModal}
-            handleOk={handleOk}   
-            confirmLoading={confirmLoading}
-              onCancel={handleCancel}
-              handleCancel={handleCancel}
-              showModal={showModal}
-        />   
+       
     </>
   );
 };

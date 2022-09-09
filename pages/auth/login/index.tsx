@@ -4,9 +4,7 @@ import LoginComponent from "@components/auth/login";
 
 const Login: React.FC = () => {
     return (
-        <Main>
             <LoginComponent/>
-        </Main>
     )
 }
 

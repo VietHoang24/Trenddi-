@@ -42,7 +42,7 @@ useEffect(() => {
         <Content
           style={{
             padding: `${padding}`,
-            marginTop: "80px",
+            marginTop: "64px",
           }}
         >
             <Component {...pageProps} />
