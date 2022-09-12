@@ -1,0 +1,42 @@
+.container {
+  //max-width: 1400px;
+  display: flex;
+
+  margin: auto;
+  h2 {
+    margin-top: 5px !important;
+  }
+  h3 {
+    margin-top: 5px !important;
+  }
+  h1 {
+    margin-top: 5px !important;
+  }
+  h4 {
+    margin-top: 5px !important;
+  }
+  h5 {
+    margin-top: 5px !important;
+  }
+}
+.campaignFrame {
+  margin-top: 50px;
+  .bodyLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.inputFrame {
+  width: 100%;
+  background-color: #ffff;
+  height: max-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+.createFormInfor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

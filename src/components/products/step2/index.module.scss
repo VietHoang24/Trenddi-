@@ -1,0 +1,144 @@
+.container {
+  //max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.steps {
+  margin: 15px 0;
+  h2 {
+    margin-top: 0 !important;
+  }
+  h3 {
+    margin-top: 0 !important;
+  }
+  h1 {
+    margin-top: 0 !important;
+  }
+  h4 {
+    margin-top: 0 !important;
+  }
+  h5 {
+    margin-top: 0 !important;
+  }
+}
+
+.siteLayout {
+  .addProductBody {
+    background-color: #ffffff;
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+    .bodyLeft {
+     
+      padding-left: 0;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+      }
+    }
+    .bodyRight {
+      .uploadFileBox {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        span {
+          font-weight: 600;
+        }
+        .uploadFile {
+          box-sizing: border-box;
+
+          /* Auto layout */
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 13px 26px;
+          gap: 8px;
+          cursor: pointer;
+          width: 170px;
+          height: 50px;
+          /* Gray */
+
+          border: 1px dashed #dedede;
+          border-radius: 8px;
+        }
+      }
+    }
+    .bodyBottom {
+      cursor: pointer;
+    }
+  }
+}
+
+.signUp {
+  cursor: pointer;
+  color: #f42c97;
+}
+.buttonBox {
+  margin: 20px 0;
+  gap: 20px;
+}
+.buttonModal {
+  gap: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.modalAddProduct {
+  .ant-modal-content {
+    border-radius: 20px;
+  }
+  .modalInput {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    .ant-modal-content {
+      top: 200px !important;
+    }
+    .uploadFile {
+      box-sizing: border-box;
+
+      /* Auto layout */
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 13px 26px;
+      gap: 8px;
+      cursor: pointer;
+      width: 170px;
+      height: 50px;
+      /* Gray */
+
+      border: 1px dashed #dedede;
+      border-radius: 8px;
+    }
+  }
+  .imageWrapper{
+    .imageItem{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      .changeImageIcon{
+        font-size: 20px;
+      }
+    }
+  }
+}
