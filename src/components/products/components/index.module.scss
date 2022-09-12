@@ -1,9 +1,4 @@
-.container {
-  //max-width: 1400px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
+
 .steps {
   margin: 15px 0;
   h2 {
@@ -22,113 +17,24 @@
     margin-top: 0 !important;
   }
 }
-.siteLayout {
-  .addProductBody {
-    background-color: #ffffff;
-    border-radius: 10px !important;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-
-    .bodyLeft {
-      padding: 50px;
-      padding-left: 0;
-      box-sizing: border-box;
-      img {
-        width: 100%;
-      }
-    }
-    .bodyRight {
-      padding: 100px 50px;
-      padding-right: 0;
-      .uploadFileBox {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        span {
-          font-weight: 600;
-        }
-        .uploadFile {
-          box-sizing: border-box;
-
-          /* Auto layout */
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: center;
-          padding: 13px 26px;
-          gap: 8px;
-          cursor: pointer;
-          width: 170px;
-          height: 50px;
-          /* Gray */
-
-          border: 1px dashed #dedede;
-          border-radius: 8px;
-        }
-      }
-    }
-    .bodyBottom {
-      cursor: pointer;
-    }
-  }
-}
-
-.signUp {
-  cursor: pointer;
-  color: #f42c97;
-}
-.buttonBox {
-  margin: 20px 0;
-  gap: 20px;
-}
-.buttonModal {
-  gap: 20px;
-}
-.header {
+.headingRight {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .headerLeft {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .headerRight {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
+  flex-direction: column;
+  align-items: flex-end;
 }
-.modalAddProduct {
-  .ant-modal-content {
-    border-radius: 20px;
-  }
-  .modalInput {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    .ant-modal-content {
-      top: 200px !important;
-    }
-    .uploadFile {
-      box-sizing: border-box;
+.pagingItems {
+  display: flex;
+  width: 140px;
+  padding-top: 10px;
+}
+.pagingItem {
+  width: 40px;
+  height: 6px;
+  border-radius: 10px;
+  background: #DEDEDE;
+  margin-left: 5px;
+}
 
-      /* Auto layout */
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 13px 26px;
-      gap: 8px;
-      cursor: pointer;
-      width: 170px;
-      height: 50px;
-      /* Gray */
-
-      border: 1px dashed #dedede;
-      border-radius: 8px;
-    }
-  }
+.pagingItemActive {
+  background: #232323;
 }

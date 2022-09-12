@@ -19,17 +19,16 @@
     justify-content: center;
     padding: 50px;
 
+
     .bodyLeft {
-      padding: 50px;
-      padding-left: 0;
+ 
       box-sizing: border-box;
       img {
         width: 100%;
       }
     }
     .bodyRight {
-      padding: 100px 50px;
-      padding-right: 0;
+      padding: 100px 0;
       .uploadFileBox {
         margin-top: 10px;
         display: flex;

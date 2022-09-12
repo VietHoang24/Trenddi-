@@ -20,12 +20,12 @@ const HeaderPage: React.FC<HeaderProps> = (props: HeaderProps) => {
         >
           <div className={styles.header} >
             <div className={styles.headerLeft}>
-              <Image src="/images/menu.svg" preview={false} />
-              <Image src="/images/trendiiLogo.png" preview={false} />
+              <Image src="/images/icons/menu.svg" preview={false} />
+              <Image src="/images/icons/trendiiLogo.png" preview={false} />
             </div>
             <div className={styles.headerRight}>
-              <Image src="/images/bell.svg" preview={false} />
-              <Image src="/images/user.svg" preview={false} />
+              <Image src="/images/icons/bell.svg" preview={false} />
+              <Image src="/images/icons/user.svg" preview={false} />
             </div>
           </div>
           

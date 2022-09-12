@@ -98,7 +98,7 @@ const NotifyPopup = ({
           <div className={styles.content__title}> {title} </div>
           <div className={styles.content__message}> {message} </div>
           <div className={styles.content__button}>
-            <Row justify="center" gutter={[24, 0]}>
+            <Row justify="center" gutter={[12, 12]}>
         <Col>
           <CustomButton background="white" title="Cancel" onClick={onCancel} />
         </Col>

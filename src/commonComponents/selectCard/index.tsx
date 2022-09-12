@@ -14,9 +14,9 @@ const SelectCard = (props: SelectCardProps) =>{
 	<div className={styles.selectedTag} onClick={onClick}
 	style={{ border: isSelected ?"1px solid #59d30c" : "1px solid #DEDEDE"}}>
 		<div className={styles.selectIcon} >
-			 {isSelected ?<Image src='/images/selected.svg'
+			 {isSelected ?<Image src='/images/icons/selected.svg'
                       preview={false}
-                      /> : <Image src='/images/unSelect.svg'
+                      /> : <Image src='/images/icons/unSelect.svg'
                       preview={false}
                       /> }
 		</div>

@@ -11,7 +11,7 @@ export interface ProductsState {
 
 // Initial state
 const initialState: ProductsState = {
-  currentPageState: '2',
+  currentPageState: '1',
   isCPImpression:true,
   isCPClick:false,
 };

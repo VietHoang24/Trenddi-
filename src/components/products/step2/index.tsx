@@ -60,8 +60,8 @@ const AddProduct = (props:AddProductProps) => {
           <Row className={styles.container}>
             <Col span={24} className={styles.siteLayout}   >
               <Row className={styles.addProductBody} >
-                <Col  xl={12} className={styles.bodyLeft}>
-                  <Image src="/images/addproduct.png" preview={false} />
+                <Col  xl={12} sm={16} className={styles.bodyLeft}>
+                  <Image src="/images/icons/addproduct.png" preview={false} />
                 </Col>
                 <Col  xl={12} className={styles.bodyRight}>
                   <Row justify="center" gutter={[0, 8]}>
@@ -69,21 +69,21 @@ const AddProduct = (props:AddProductProps) => {
                       <Typography.Title level={2}>Add your product data feed</Typography.Title>
                     </Col>
                     <Col span={24}>
-                      <Row justify="space-between" gutter={[24, 0]}>
-                        <Col span={12}>
+                      <Row justify="space-between" gutter={[24, 24]}>
+                        <Col md={12} xs={24}>
                           <SelectCard
                             isSelected={isSelectedShopify}
                             title="Intergrate Shopify Feed"
-                            cardIcon="/images/shopify.svg"
+                            cardIcon="/images/icons/shopify.svg"
                             cardIconBg="rgba(243, 44, 151, 0.08)"
                             onClick={handleClickShopify}
                           />
                         </Col>
-                        <Col span={12}>
+                        <Col md={12}  xs={24}>
                           <SelectCard
                             isSelected={isSelectedCsv}
                             title="Upload a product CSV"
-                            cardIcon="/images/csv.svg"
+                            cardIcon="/images/icons/csv.svg"
                             cardIconBg="rgba(255, 166, 33, 0.08)"
                             onClick={handleClickCsv}
                           />
@@ -99,7 +99,7 @@ const AddProduct = (props:AddProductProps) => {
                                 }]
                             }>
                           <div className={styles.uploadFile} onClick={showModal}>
-                            <Image src="/images/uploadIcon.svg" preview={false} />
+                            <Image src="/images/icons/uploadIcon.svg" preview={false} />
                             <Typography.Title level={5}>Upload File</Typography.Title>
                         </div>
 
@@ -136,7 +136,7 @@ const AddProduct = (props:AddProductProps) => {
           <CustomButton background='black' title={"Next"} htmlType="submit"/>
           </Row>
           </Form>
-         <AddProductModal 
+         {openModal&&<AddProductModal 
          openModal={openModal} 
          setOpenModal={setOpenModal}
          handleOk={handleOk}   
@@ -144,7 +144,7 @@ const AddProduct = (props:AddProductProps) => {
           onCancel={handleCancel}
           handleCancel={handleCancel}
           showModal={showModal}
-        />   
+        />   }
     </>
   );
 };

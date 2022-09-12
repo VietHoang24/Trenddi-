@@ -20,6 +20,7 @@ const CampaignGoal = () => {
                 <Row gutter={[24, 0]}>
                   <Col md={12} xs={24}>
                     <BasicInput
+                      name='campaignName'
                       rules={[
                         {
                           required: true,
@@ -32,11 +33,12 @@ const CampaignGoal = () => {
                   </Col>
                   <Col  md={12} xs={24}>
                     <BasicSelect
+                      name='countrySelected'
                       defaultValue={'2'}
                       rules={[
                         {
-                          required: true,
-                          message: 'Please enter Campaign name',
+                          required: false,
+                          message: 'Please Select the country where products are sold',
                         },
                       ]}
                       options={[

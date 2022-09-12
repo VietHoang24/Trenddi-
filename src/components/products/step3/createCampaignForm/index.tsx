@@ -17,12 +17,17 @@ const CampaignFrame = () => {
   const onFinish = () => {
     
     router.push('/products/success')
+    setIsOpen(false)
   };
   const handlePreviousClick = () => {
     dispatch(setProductCurrentPageState('3'))
   }
   const handleNextClick=()=>{
      setIsOpen(true)
+  }
+  const onConfirm =()=>{
+    setIsOpen(false)
+
   }
   return (
     <>
@@ -53,6 +58,7 @@ const CampaignFrame = () => {
           onCancel={()=>  setIsOpen(false)}
           htmlType="submit"
           form= "createCampaignForm"
+          onConfirm={onConfirm}
         />
       </Form>
       

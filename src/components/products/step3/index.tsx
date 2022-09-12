@@ -17,9 +17,7 @@ const CreateCampaign = (props: CreateCampaignProps) => {
   
     const  isCPImpresion = useSelector(selectIsCPImpressionState);
     const  isCPClick = useSelector(selectIsCPClickState);
-    console.log("iscpi: ",isCPImpresion)
     const handleClickCPM=()=>{
-      console.log("cpm")
       dispatch(setIsCPImpressionState(true))
       dispatch(setIsCPClickState(false))
     }
@@ -39,32 +37,32 @@ const CreateCampaign = (props: CreateCampaignProps) => {
           <Row className={styles.container}>
             <Col span={24} className={styles.siteLayout}   >
               <Row className={styles.addProductBody} >
-                <Col  xl={12} className={styles.bodyLeft}>
-                  <Image src="/images/addproduct.png" preview={false} />
+                <Col  xl={12} sm={16} className={styles.bodyLeft}>
+                  <Image src="/images/icons/addproduct.png" preview={false} />
                 </Col>
-                <Col  xl={12} className={styles.bodyRight}>
+                <Col  xl={12}  sm={24} className={styles.bodyRight}>
                   <Row justify="center" gutter={[0, 8]}>
                     <Col span={24}>
                       <Typography.Title level={2}>
                         Select the goal that would make this campaign successful to you
                       </Typography.Title>
                     </Col>
-                    <Col span={24}>
+                    <Col span={24} >
                       <Row justify="space-between" gutter={[24, 24]}>
-                        <Col span={16}>
+                        <Col xl={12} sm={24} xs={24}>
                           <SelectCard
                             isSelected={isCPImpresion}
                             title="CPM - Cost per impression"
-                            cardIcon="/images/shopify.svg"
+                            cardIcon="/images/icons/shopify.svg"
                             cardIconBg="rgba(243, 44, 151, 0.08)"
                             onClick={handleClickCPM}
                           />
                         </Col>
-                        <Col span={16}>
+                        <Col xl={12}  sm={24} xs={24}>
                           <SelectCard
                             isSelected={isCPClick}
                             title="CPM - Cost per click"
-                            cardIcon="/images/csv.svg"
+                            cardIcon="/images/icons/csv.svg"
                             cardIconBg="rgba(255, 166, 33, 0.08)"
                             onClick={handleClickCPC}
                           />

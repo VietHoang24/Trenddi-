@@ -17,8 +17,9 @@ const CreateFormInfor = () => {
           <Typography.Title level={2}>Ads campaign 1</Typography.Title>
         </div>
         <Row>
-          <Row gutter={[24, 0]} align="middle">
-            <Col>
+          <Col span={24}>
+             <Row gutter={[24, 0]} align="middle" justify='start'>
+            <Col xs={8} md={4} >
               <InputFrame
                 style={{
                   backgroundColor: '#F8F8F8 ',
@@ -31,16 +32,18 @@ const CreateFormInfor = () => {
                   width: '100px',
                 }}
               >
-                 <Image src="/images/uploadIcon.svg" preview={false} />
+                 <Image src="/images/icons/uploadIcon.svg" preview={false} />
               </InputFrame>
             </Col>
-            <Col>
+            <Col  xs={16} md={20}>
               <Typography.Text>
                 <span className="secondary-color">Campaign Goal</span>
               </Typography.Text>
               <Typography.Title level={4}>CTM - Cost per impression</Typography.Title>
             </Col>
           </Row>
+          </Col>
+         
           <Col span={24}>
              <Typography.Text>
             <span className="secondary-color">The country the product are sold: Australia</span>

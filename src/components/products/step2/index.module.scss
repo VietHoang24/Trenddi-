@@ -22,6 +22,7 @@
     margin-top: 0 !important;
   }
 }
+
 .siteLayout {
   .addProductBody {
     background-color: #ffffff;
@@ -31,7 +32,7 @@
     padding: 50px;
 
     .bodyLeft {
-      padding: 50px;
+     
       padding-left: 0;
       box-sizing: border-box;
       img {
@@ -39,8 +40,6 @@
       }
     }
     .bodyRight {
-      padding: 100px 50px;
-      padding-right: 0;
       .uploadFileBox {
         margin-top: 10px;
         display: flex;
@@ -129,6 +128,17 @@
 
       border: 1px dashed #dedede;
       border-radius: 8px;
+    }
+  }
+  .imageWrapper{
+    .imageItem{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      .changeImageIcon{
+        font-size: 20px;
+      }
     }
   }
 }

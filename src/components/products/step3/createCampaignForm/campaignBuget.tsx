@@ -11,6 +11,7 @@ const CampaignBuget = () => {
                 <Row gutter={[24, 0]}>
                   <Col sm={8} xs={24}>
                     <BasicInput
+                      name='buget'
                       rules={[
                         {
                           required: true,
@@ -23,6 +24,7 @@ const CampaignBuget = () => {
                   </Col>
                   <Col sm={8}  xs={24}>
                     <BasicInput
+                      name='dailyBudget'
                       rules={[
                         {
                           required: true,
@@ -35,6 +37,7 @@ const CampaignBuget = () => {
                   </Col>
                   <Col sm={8}  xs={24}>
                     <BasicInput
+                      name='maximumBudget'
                       rules={[
                         {
                           required: true,
@@ -47,6 +50,7 @@ const CampaignBuget = () => {
                   </Col>
                   <Col md={12} xs={24}>
                     <BasicDatePicker
+                      name='startDate'
                       rules={[
                         {
                           required: true,
@@ -59,10 +63,11 @@ const CampaignBuget = () => {
                   </Col>
                   <Col md={12} xs={24}>
                     <BasicDatePicker
+                      name='endDate'
                       rules={[
                         {
                           required: true,
-                          message: 'Please enter Campaign start date',
+                          message: 'Please enter Campaign end date',
                         },
                       ]}
                       label={<Typography.Text>Campaign end date</Typography.Text>}

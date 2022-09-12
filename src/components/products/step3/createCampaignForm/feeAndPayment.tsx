@@ -25,30 +25,33 @@ const FeeAndPayment = () => {
           </Col>
         </Row>
         <BasicInput
+          name='cardNumber'
           rules={[
             {
               required: true,
-              message: 'Please enter Campaign name',
+              message: 'Please enter Card Number',
             },
           ]}
           label={<Typography.Text>Card Number</Typography.Text>}
           useLabel={true}
         />
         <BasicInput
+          name='cardName'
           rules={[
             {
               required: true,
-              message: 'Please enter Campaign name',
+              message: 'Please enter Name On Card',
             },
           ]}
           label={<Typography.Text>Name On Card</Typography.Text>}
           useLabel={true}
         />
         <BasicInput
+          name='expiryDate'
           rules={[
             {
               required: true,
-              message: 'Please enter Campaign name',
+              message: 'Please enter Expiry Date',
             },
           ]}
           label={<Typography.Text>Expiry Date</Typography.Text>}
